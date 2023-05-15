@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+li {text-decoration: none;}
+
+        header {
+            width: 100%;
+            height: 60px;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 30px;
+        }
+
+        .nav_container {
+            width: 100%;
+            height: 60px;
+            display: flex;
+        }
+        .navbar_nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            text-align: center;
+        }
+        .navbar_nav li {
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+        }
+        .navbar_nav a {
+            color: #000;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+        .nav_brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar_nav li:not(:first-child) a:hover {
+            border-bottom: 2px solid cadetblue;
+            color: cadetblue;
+            box-shadow: 0 0 5px rgba(0,0,0,.2);
+            transition: .5s;
+            border-radius: 10px;
+        }
+
+        .list-group {
+            width: 300px;
+            margin-right: 70px;
+        }
+        .list_wrap {
+            width: 300px;
+            margin-left: 20px;
+        }
+        .list_wrap a {
+            width: 100%;
+            height: 50px;
+            padding-top: 10px;
+            border: 0;
+        }
+        .list_wrap a::before {
+            content: ">";
+            margin-right: 10px;
+        }
+        .list-group-item.active {
+            background-color: cadetblue;
+            border: 0px;
+            font-weight: bold;
+        }
+
+        .section {
+            display: flex;
+        }
+        .section h3 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding-top: 30px;
+        }
+        .section_wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .section_wrap p {
+            padding-top: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .form-select {
+            width: 200px;
+            height: 40px;
+        }
+
+        .section_search {
+            width: 100%;
+            
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+        .search_wrap {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .search {
+            width: 300px;
+            height: 40px;
+            margin: 0 10px 15px 0;
+        }
+        .search_icon {
+            width: 90px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search_icon i {
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10%;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .bi-search {
+            background-color: gold;
+        }
+        .bi-arrow-clockwise {
+            background-color: red;
+            color: #fff;
+        }
+
+        tbody td,
+        tbody th {
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        tbody>tr:nth-child(2n-1) {
+            background-color: #eee;
+        }
+        thead {
+            background-color: cadetblue;
+            color: #fff;
+        }
+
+        .order,
+        .order_2,
+        .use {
+            width: 80px;
+        }
+        .country_name {
+            width: 200px;
+        }
+        .country_name_en,
+        .country_code,
+        .country_code_3,
+        .update,
+        .amend {
+            width: 290px;
+        }
