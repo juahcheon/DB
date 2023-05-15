@@ -9,6 +9,39 @@ li {text-decoration: none;}
         header {
             width: 100%;
             height: 60px;
+            position: relative;
+        }
+        .inner {
+            box-sizing: border-box;
+        }
+        .inner h1 {
+            width: 13%;
+            text-align: center;
+            margin: 0;
+            font-size: 35px;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+        }
+        .inner>p {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            top: 20px;
+            left: 270px;
+        }
+        .profile {
+            position: absolute;
+            top: 20px;
+            right: 300px;
+        } 
+        .profile>p {
+            font-size: 14px;
+        }
+        .language {
+            position: absolute;
+            top: 20px;
+            right: 25px;
         }
 
         .navbar {
@@ -51,7 +84,6 @@ li {text-decoration: none;}
         .navbar_nav li:not(:first-child) a:hover {
             border-bottom: 2px solid cadetblue;
             color: cadetblue;
-            box-shadow: 0 0 5px rgba(0,0,0,.2);
             transition: .5s;
             border-radius: 10px;
         }
