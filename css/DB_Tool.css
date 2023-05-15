@@ -57,11 +57,11 @@ li {text-decoration: none;}
         }
 
         .list-group {
-            width: 300px;
+            width: 13%;
             margin-right: 70px;
         }
         .list_wrap {
-            width: 300px;
+            width: 100%;
             margin-left: 20px;
         }
         .list_wrap a {
@@ -90,6 +90,7 @@ li {text-decoration: none;}
 
         section {
             padding-top: 30px;
+            width: 80%;
         }
         .section_wrap {
             display: flex;
@@ -114,13 +115,13 @@ li {text-decoration: none;}
             border: 1px solid #eee;
         }
         .search_wrap {
-            width: 70%;
+            width: 80%;
             display: flex;
             flex-wrap: wrap;
             box-sizing: border-box;
         }
         .search {
-            width: 300px;
+            width: 20%;
             height: 40px;
             margin: 0 10px 15px 0;
         }
@@ -165,15 +166,15 @@ li {text-decoration: none;}
         .order,
         .order_2,
         .use {
-            width: 80px;
+            width: 4%;
         }
         .country_name {
-            width: 200px;
+            width: 10%;
         }
         .country_name_en,
         .country_code,
         .country_code_3,
         .update,
         .amend {
-            width: 290px;
+            width: 14%;
         }
