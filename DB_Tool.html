@@ -10,12 +10,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="css/DB_Tool.css">
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="js/DB_Tool.js"></script>
+    
+    <!-- 달력 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
     
@@ -69,7 +74,7 @@
     <div class="section">
         <div class="list-group">
             <ul class="list_wrap">
-                <li class="list-group-item list-group-item-action active"> 
+                <li class="list-group-item list-group-item-action"> 
                     <p>Home</p>
                     <ul class="list_list">
                         <li>
@@ -118,20 +123,18 @@
                         <option value="2">50</option>
                         <option value="3">100</option>
                     </select>
-                    <div class="search" class="input-group date"">
-                        <input type="text" class="form-control date">
+                    <div class="search input-group date">
+                        <input type="text" class="form-control calender">
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-th"></span>
                         </div>
                     </div>
-                    <div class="search" class="input-group date">
-                        <input type="text" class="form-control date" id="datepicker">
+                    <div class="input-group date search">
+                        <input type="text" class="form-control calender">
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-th"></span>
                         </div>
                     </div>
-                
-
                     <select class="form-select search" aria-label="Default select example">
                         <option selected>10</option>
                         <option value="1">20</option>
@@ -227,26 +230,44 @@
             <div class="page">
                 <nav aria-label="...">
                     <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link">Previous</a>
-                        </li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active" aria-current="page">
+                        <li class="page-item" aria-current="page">
                             <a class="page-link" href="#">2</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">></a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div class="buttons">
                 <div class="delete">
-
+                    <i class="bi bi-x"></i>
+                    <i class="bi bi-trash"></i>
                 </div>
                 <div class="makeNew">
-                    
+                    <i class="bi bi-file-earmark-excel"></i>
+                    <i class="bi bi-plus"></i>
+                </div>
+                <div class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
