@@ -16,7 +16,6 @@
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="js/DB_Tool.js"></script>
     
     <!-- 달력 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -114,59 +113,79 @@
             <h3>국가코드 관리</h3>
             <div class="db_wrap">
                 <div class="db_inner">
-                    <form class="row g-3 needs-validation" novalidate>
+                    <form class="needs-validation" novalidate>
                         <ul>
                             <li>
-                                <label class="essential" for="name">Seq</label>
+                                <label class="essential form-label" for="name">Seq</label>
                                 <input type="text" disabled placeholder="자동생성">
                             </li>
                             <li>
-                                <label class="essential" for="name">국가 이름</label>
-                                <input type="text" required>
+                                <label class="essential form-label" for="name">국가 이름</label>
+                                <input type="text" class="form-control" required>
                             </li>
                             <li class="db_right">
-                                <label for="name">국가 이름 (영문)</label>
-                                <input type="text" placeholder="영대소문자">
+                                <label class="form-label" for="name">국가 이름 (영문)</label>
+                                <input type="text" class="form-control" placeholder="영대소문자">
                             </li>
                             <li>
-                                <label for="name">국가 이름 (한글)</label>
-                                <input type="text">
+                                <label class="form-label" for="name">국가 이름 (한글)</label>
+                                <input type="text" class="form-control">
                             </li>
                             <li class="db_right">
-                                <label class="essential" for="name">국가 코드 (3자리)</label>
-                                <input type="text" placeholder="영대소문자" required>
+                                <label class="essential form-label" for="name">국가 코드 (3자리)</label>
+                                <input type="text" class="form-control" placeholder="영대소문자" required>
                             </li>
                             <li>
-                                <label class="essential" for="name">국가 코드 (2자리)</label>
-                                <input type="text" placeholder="영대소문자" required>
+                                <label class="essential form-label" for="name">국가 코드 (2자리)</label>
+                                <input type="text" class="form-control" placeholder="영대소문자" required>
                             </li>
                             <li class="db_right">
-                                <label class="essential" for="name">순서</label>
-                                <input type="number" placeholder="숫자(0~255)" required>
+                                <label class="essential form-label" for="name">순서</label>
+                                <input type="number" class="form-control" placeholder="숫자(0~255)" required>
                             </li>
                             <li>
-                                <label class="essential" for="name">사용여부</label>
-                                <select name="use" required>
+                                <label class="essential form-label" for="name">사용여부</label>
+                                <select name="use" class="form-control" required>
                                     <option value="1" selected>Y</option>
                                     <option value="1">N</option>
                                 </select>
                             </li>
                             <li>
-                                <label for="name">설명</label>
+                                <label class="form-label" for="name">설명</label>
                                 <textarea name="explain" cols="30" rows="5"></textarea>
                             </li>
                         </ul>
+                        <div class="icon_wrap">
+                            <button class="btn" type="button">
+                                <a href="DB_Tool.html">
+                                    <i class="bi bi-list"></i>
+                                </a>
+                            </button>
+                            <button class="btn" type="submit">
+                                <i class="bi bi-bookmark"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="icon_wrap">
-                <button type="button"><a href="DB_Tool.html"><i class="bi bi-list"></i></a></button>
-                <button type="button submit_btn"><i class="bi bi-bookmark"></i></button>
-            </div>
+            
         </section>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <footer>
+        <div class="foot_inner">
+            <div class="foot_text">
+                <p>(주)아컴퍼니</p>
+                <p>대표 천주아</p>
+                <p>사업자등록번호 202-30-517000</p>
+                <p>서울특별시 강남구 테헤란로(에서 일하고싶다)</p>
+            </div>
+            <span>Copyright 2023. Acompany lnc. all rights reserved</span>
+        </div>
+    </footer>
+
+    
+    <script src="js/DB_Tool.js"></script>
 
 </body>
 </html>
