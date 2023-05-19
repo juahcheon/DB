@@ -71,49 +71,38 @@ $(function(){
     //     })
     // })()
 
+
+    var essential = $("input[required]");
     
 
     $(".submit_btn").on("click",function(){
-        $(".essential_i").each(function(){
 
-            if ( $(".essential_i").val() == null || $(".essential_i").val() == "" ) {
-
-                $(".essential_i").not("value").css({
-                    "border" : "solid 1px red",
-                    "box-sizing" : "border-box",
-                    "box-shadow" : "0 0 10px rgba(0,0,0,.1)",
-                    "border-radius" : "10px"
-                });
-                
-
-            } else {
-                // pass
+        essential.each(function(index, item) {
+            if ( $(this).val() === "" ) {
+                $(this).addClass("essential_i");
             }
-            
-        })
+        });
 
     })
         
 
 
-        $(".essential_i").each(function(){
+    essential.each(function(){
 
-            $(this).on("keyup", function(){
+        essential.on("keyup", function(){
 
-                
-
-                $(this).css({
-                    "border" : "solid 1px green",
-                    "box-sizing" : "border-box",
-                    "box-shadow" : "0 0 10px rgba(0,0,0,.1)",
-                    "border-radius" : "10px"
-                });
-
-            })
-
-            
+            $(this).css({
+                "border" : "solid 1px green",
+                "box-sizing" : "border-box",
+                "box-shadow" : "0 0 10px rgba(0,0,0,.1)",
+                "border-radius" : "10px"
+            });
 
         })
+
+        
+
+    })
 
 
 })
