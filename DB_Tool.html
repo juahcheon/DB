@@ -13,14 +13,16 @@
 
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="css/DB_Tool.css">
+    
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="js/DB_Tool.js"></script>
+
     
     <!-- 달력 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 </head>
 <body>
     
@@ -130,16 +132,10 @@
                         <option value="3">100</option>
                     </select>
                     <div class="search input-group date">
-                        <input type="text" class="form-control calender">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                        </div>
+                        <input type="text" class="form-control calender" placeholder="시작일">
                     </div>
                     <div class="input-group date search">
-                        <input type="text" class="form-control calender">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-th"></span>
-                        </div>
+                        <input type="text" class="form-control calender" placeholder="종료일">
                     </div>
                     <select class="form-select search" aria-label="Default select example">
                         <option selected>10</option>
@@ -252,6 +248,7 @@
             <div class="buttons">
                 <div class="delete">
                     <i class="bi bi-x"></i>
+                    <!-- <i class="bi bi-trash"></i> -->
                     <i class="bi bi-trash"></i>
                 </div>
                 <div class="makeNew">
@@ -262,11 +259,11 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Modal title</h5>
+                                <h5 class="modal-title"></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Modal body text goes here.</p>
+                                <p></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -279,8 +276,23 @@
         </section>
     </div>
 
+    <footer>
+        <div class="foot_inner">
+            <div class="foot_text">
+                <p>(주)아컴퍼니</p>
+                <p>대표 천주아</p>
+                <p>사업자등록번호 202-30-517000</p>
+                <p>서울특별시 강남구 테헤란로(에서 일하고싶다)</p>
+            </div>
+            <span>Copyright 2023. Acompany lnc. all rights reserved</span>
+        </div>
+    </footer>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    
+    <script src="js/DB_Tool.js"></script>
+    <script>
+        $(".calender").flatpickr({
+            dateFormat: "Y-m-d H:i",
+        });
+    </script>
 </body>
 </html>

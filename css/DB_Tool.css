@@ -382,9 +382,15 @@ footer {
 .db_inner ul li select,
 .db_inner ul li textarea {
     width: 100%;
-    padding: 10px;
+    padding: 0 10px;
     box-sizing: border-box;
     border: 1px solid #eee;
+}
+.db_inner ul li select {
+    border-radius: 10px;
+}
+.db_inner ul li textarea {
+    padding-top: 10px;
 }
 .db_inner ul li input,
 .db_inner ul li select {
