@@ -2,9 +2,10 @@ $(function(){
 
     // list-group toggle
     var toggleBtn = $(".list_wrap li");
-    var pageBtn = $(".page-link");
+    var pageBtn = $(".page-item");
     var toggleText = $(".list_list").find("li");
 
+    $(".section_wrap").find("p").after(".tr".length);
 
     toggleText.hide();
     toggleBtn.on("click", function(){
@@ -14,18 +15,16 @@ $(function(){
 
     pageBtn.on("click", function(){
         $(this).addClass("active");
+        $(".page-item").not(this).removeClass("active");
     });
 
-    pageBtn.on("mouseenter", function(){
-        $(this).removeClass("active");
-    });
 
 
     var modalBtn = $(".delete .bi-trash");
     modalBtn.on("click", function(){
 
         $(".modal-title").text("모달창입니다.");
-        $(".modal-body").find("p").text("이제 꺼주세요.")
+        $(".modal-body").find("p").text("꺼지세요.")
         $(".modal").show();
 
     });
@@ -74,12 +73,18 @@ $(function(){
 
     var essential = $("input[required]");
     
-
     $(".submit_btn").on("click",function(){
 
         essential.each(function(index, item) {
             if ( $(this).val() === "" ) {
                 $(this).addClass("essential_i");
+                $(this).parent("li").append(
+                    "<p class='noticeText'> <i class='bi bi-exclamation-triangle'></i> 입력해주세요.</p>");
+                $(this).parent("li").find("p:not(:first-of-type)").hide();
+                
+            } else {
+                $(this).removeClass("essential_i");
+                $(this).parent("li").find("p").empty();
             }
         });
 
@@ -97,12 +102,26 @@ $(function(){
                 "box-shadow" : "0 0 10px rgba(0,0,0,.1)",
                 "border-radius" : "10px"
             });
+            $(this).parent("li").find("p").empty();
 
         })
 
         
 
     })
+
+
+
+    $(".checkAll").on("change", function(){
+        if( $(".checkAll").is(":checked") ) {
+            $("tbody").find("input[type='checkbox']").prop("checked", true);
+        } else {
+            $("tbody").find("input[type='checkbox']").prop("checked", false);
+        }
+
+    })
+        
+    
 
 
 })

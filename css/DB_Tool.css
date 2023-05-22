@@ -400,7 +400,7 @@ footer {
 .db_inner ul li input,
 .db_inner ul li select {
     height: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .essential::after {
     content: "*";
@@ -409,6 +409,7 @@ footer {
 }
 .db_right {
     left: 50%;
+    /* transform: translateY(-100%); */
     position: absolute;
 }
 .icon_wrap {
@@ -429,4 +430,12 @@ footer {
 }
 .bi-bookmark {
     background-color: green;
+}
+.noticeText {
+    font-size: 12px;
+    color: red;
+    margin-bottom: 5px;
+}
+p {
+    margin-bottom: 0;
 }
